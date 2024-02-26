@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     background-color: #e3e7d3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar {
@@ -44,7 +45,7 @@ body {
   }
 
   .search-button:hover {
-    background-color: #0056b3;
+    background-color: #bdc2bf;
   }
 
 .main-abbr {
@@ -67,4 +68,25 @@ body {
     margin-right: 500px;
     margin-left: 100px;
     line-height: 2;
+}
+
+
+.login-container {
+    text-align: center;
+    align-items: center;
+}
+
+#student-button {
+    background-color: #2d5a26;
+    color: white
+}
+
+#organization-button {
+    margin-left: 25px;
+    background: #e3e7d3;
+}
+
+#student-button, #organization-button {
+    border: 5px solid black;
+    border-radius: 10px;
 }
