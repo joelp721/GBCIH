@@ -15,8 +15,45 @@
 body {
     margin: 0 auto;
     background-color: #e3e7d3;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Sarala;
 }
+
+ul {
+    padding: 0;
+    margin: 0 0 0 250px;
+    list-style: none;
+}
+
+nav {
+    width: 100%;
+    overflow: auto;
+    margin-left: 20px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    width: 100px;
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.logo img {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+/* 
+
+IRRELEVANT CODE
+
+REMEMBER TO DELETE THIS LATER 
 
 .navbar {
     display: inline-block;
@@ -32,35 +69,7 @@ body {
 .navbar a:hover {
     color: #059033;
 }
-
-.search-form {
-    display: inline-block;
-    position: relative;
-    text-align: right;
-    margin-left: 700px;
-  }
-
-  .search-input {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 200px;
-  }
-
-  .search-button {
-    background-color: #059033;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    cursor: pointer;
-  }
-
-  .search-button:hover {
-    background-color: #bdc2bf;
-  }
+*/
 
 .main-abbr {
     color: #2d5a26;
@@ -90,9 +99,9 @@ body {
     align-items: center;
 }
 
-#student-button {
+#login-button {
     background-color: #2d5a26;
-    color: white
+    color: white;
 }
 
 #organization-button {
@@ -100,9 +109,18 @@ body {
     background: #e3e7d3;
 }
 
-#student-button, #organization-button {
-    border: 5px solid black;
-    border-radius: 10px;
+#login-button {
+    width: 20%;
+    height: 45px;
+    background: #2d5a26;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
 }
 
 /* styling for the login page */ 
@@ -120,7 +138,7 @@ body {
 
 .login-box {
     width: 420px;
-    background-color: #bdc2bf;
+    background-color: #e3e7d3;
     color: black;
     border-radius: 10px;
     padding: 30px 40px;
@@ -150,7 +168,7 @@ body {
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
@@ -197,7 +215,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: white;
+    color:  white;
     font-weight: 600;
 }
 
