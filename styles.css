@@ -235,3 +235,11 @@ REMEMBER TO DELETE THIS LATER
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+/*style for the userHome*/
+.discover{
+float: left;
+margin-left: 300px;
+margin-top: 20px;
+
+}
