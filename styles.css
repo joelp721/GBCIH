@@ -238,8 +238,60 @@ REMEMBER TO DELETE THIS LATER
 
 /*style for the userHome*/
 .discover{
-float: left;
-margin-left: 300px;
-margin-top: 20px;
+    float: left;
+    margin-left: 300px;
+    margin-top: 15px;
 
+}
+
+.discover input{
+    width: 500px;
+    height: 42px;
+    font-size: 100%;
+}
+
+.calendar{
+width: 320px;
+border: 1px solid black;
+border-radius:5px;
+padding: 10px;
+box-shadow:0 0 5px black;
+}
+
+.calHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekdays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.weekdays div{
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+
+}
+
+.days div{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.days div.today{
+    background-color: #f2f2f2;
+}
+
+.days div.selected {
+    background-color: #3498db;
+    color: #fff;
 }
