@@ -237,18 +237,6 @@ REMEMBER TO DELETE THIS LATER
 }
 
 /*style for the userHome*/
-.discover{
-    float: left;
-    margin-left: 300px;
-    margin-top: 15px;
-
-}
-
-.discover input{
-    width: 500px;
-    height: 42px;
-    font-size: 100%;
-}
 
 .calendar{
 width: 320px;
@@ -319,9 +307,11 @@ body {
   
   #header {
     padding: 10px;
-    color: #d36c6c;
-    font-size: 26px;
-    font-family: sans-serif;
+    color: #2d5a26;
+    font-size: 50px;
+    font-family: "Times New Roman",
+                    Times, serif;
+    font-style:italic;
     display: flex;
     justify-content: space-between;
   }
@@ -425,3 +415,5 @@ body {
     position: absolute;
     background-color: rgba(0,0,0,0.8);
   }
+
+  
