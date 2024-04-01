@@ -236,6 +236,99 @@ REMEMBER TO DELETE THIS LATER
     text-decoration: underline;
 }
 
+/* Modify the look of the search bar */
+
+.search-container {
+    display: flex;
+    margin-right: 30px; /* Adjust spacing from other elements */
+    margin-top: 20px; /* Adjust margin from the top */
+    margin-left: 150px;
+    justify-content: flex-end; /* Align the search bar to the right */
+}
+#searchInput {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px 10 10 20px;
+    outline: none;
+    font-size: 16px; /* Adjust font size */
+    width: 300px; /* Adjust width of the input */
+}
+
+#searchInput:focus {
+    border-color: #059033; /* Change border color when focused */
+}
+
+#searchInput::placeholder {
+    color: #bdc2bf; /* Change placeholder text color */
+}
+
+#searchButton {
+    padding: 10px 15px;
+    background-color: #059033;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#searchButton:hover {
+    background-color: #2d5a26; /* Change background color on hover */
+}
+
+.tab-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Display tabs vertically */
+    align-items: center; /* Center align tabs */
+    width: 800px; /* Set width for the tab container */
+    height: 400px; /* Set height for the tab container */
+    border: 2px solid #333232; /* Add border to the tab container */
+    border-radius: 10px; /* Add border radius to create a square */
+    padding: 20px; /* Add padding to the tab container */
+    margin: 50px auto 0 auto; /* Center the tab container horizontally and add margin to the top */
+}
+
+.tablink {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px; /* Add some spacing between tabs */
+    transition: background-color 0.3s;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+/* Style the active tab */
+.tablink.active {
+    background-color: #ddd; /* Change active tab background color */
+}
+/* Tab content container */
+.tab-content-container {
+    border: 1px solid #8bb17e;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex; /* Display tab content in a row */
+    flex-direction: column; /* Display tab content vertically */
+}
+/* Tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #62c163;
+    border-top: none;
+    width: 100%; /* Ensure tab content fills the container */
+}
+
+/* Display active tab content */
+.tabcontent.active {
+    display: block;
+}
+
 /*style for the userHome*/
 
 .calendar{
