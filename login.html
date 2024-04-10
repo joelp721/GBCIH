@@ -13,6 +13,37 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- JavaScript Array for login redirect. This can be moved to a seperate file later if necessary -->
+
+    <script>
+
+        // USERNAME & PASSWORD ARRAY 
+        const users = [
+            { username: 'JohnSmith3@my.unt.edu', password: 'JohnnyBoy123'},
+            { username: 'AlexRodriguez7@my.unt.edu', password: 'ARod23'},
+
+            // We can add the organizations here once we have that functionality setup! 
+        ];
+
+        function loginUser() {
+            const username = document.getElementById('username').value;
+
+            const password = document.getElementById('password').value;
+
+            //Verify the credentials match as specfified in the array
+
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                alert('Welcome back!');
+
+                window.location.href = "userHome.html";
+            } else {
+                alert('Username or password do not match existing user. Try again.');
+            }
+        }
+
+    </script>
 </head>
 
 <body class="login-body">
@@ -27,7 +58,7 @@
 
         <div class="input-box">
 
-            <input type="text" placeholder="EUID" required>
+            <input type="text" id="username" name="username" placeholder="EUID" required>
 
             <i class='bx bxs-user-pin'></i>
 
@@ -35,7 +66,7 @@
 
         <div class="input-box">
 
-            <input type="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
 
             <i class='bx bxs-lock-alt'></i>
 
@@ -49,7 +80,7 @@
         </div>
         <!-- going to change this later, linking to the user home-->
         <!--                                   originally "submit"-->
-        <a href="userHome.html"><button type="button">Login</button></a>
+        <!--<a href="userHome.html">--><button type="button" onclick="loginUser()" class="submit-btn">Login</button></a>
 
         <div class="register-link">
             <p>
