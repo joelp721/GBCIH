@@ -288,7 +288,7 @@ box-shadow:0 0 5px black;
 
 
 /*for the calendar*/
-body {
+.calendarBody {
     display: flex;
     margin-top: 50px;
     justify-content: center;
