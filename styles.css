@@ -123,6 +123,22 @@ REMEMBER TO DELETE THIS LATER
     font-weight: 600;
 }
 
+/* stying for org page */
+
+#subscribe-button {
+    width: 20%;
+    height: 45px;
+    background: #2d5a26;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
 /* styling for the login page */ 
 
 .login-body {
@@ -235,3 +251,278 @@ REMEMBER TO DELETE THIS LATER
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+/* Modify the look of the search bar */
+
+.search-container {
+    display: flex;
+    margin-right: 30px; /* Adjust spacing from other elements */
+    margin-top: 20px; /* Adjust margin from the top */
+    margin-left: 150px;
+    justify-content: flex-end; /* Align the search bar to the right */
+}
+#searchInput {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px 10 10 20px;
+    outline: none;
+    font-size: 16px; /* Adjust font size */
+    width: 300px; /* Adjust width of the input */
+}
+
+#searchInput:focus {
+    border-color: #059033; /* Change border color when focused */
+}
+
+#searchInput::placeholder {
+    color: #bdc2bf; /* Change placeholder text color */
+}
+
+#searchButton {
+    padding: 10px 15px;
+    background-color: #059033;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#searchButton:hover {
+    background-color: #2d5a26; /* Change background color on hover */
+}
+
+.tab-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Display tabs vertically */
+    align-items: center; /* Center align tabs */
+    width: 800px; /* Set width for the tab container */
+    height: 400px; /* Set height for the tab container */
+    border: 2px solid #333232; /* Add border to the tab container */
+    border-radius: 10px; /* Add border radius to create a square */
+    padding: 20px; /* Add padding to the tab container */
+    margin: 50px auto 0 auto; /* Center the tab container horizontally and add margin to the top */
+}
+
+.tablink {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px; /* Add some spacing between tabs */
+    transition: background-color 0.3s;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+/* Style the active tab */
+.tablink.active {
+    background-color: #ddd; /* Change active tab background color */
+}
+/* Tab content container */
+.tab-content-container {
+    border: 1px solid #8bb17e;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex; /* Display tab content in a row */
+    flex-direction: column; /* Display tab content vertically */
+}
+/* Tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #62c163;
+    border-top: none;
+    width: 100%; /* Ensure tab content fills the container */
+}
+
+/* Display active tab content */
+.tabcontent.active {
+    display: block;
+}
+
+/*style for the userHome*/
+
+.calendar{
+width: 320px;
+border: 1px solid black;
+border-radius:5px;
+padding: 10px;
+box-shadow:0 0 5px black;
+}
+
+.calHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekdays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.weekdays div{
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+
+}
+
+.days div{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.days div.today{
+    background-color: #f2f2f2;
+}
+
+.days div.selected {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+
+
+/*for the calendar*/
+body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #FFFCFF;
+  }
+  button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #header {
+    padding: 10px;
+    color: #2d5a26;
+    font-size: 50px;
+    font-family: "Times New Roman",
+                    Times, serif;
+    font-style:italic;
+    display: flex;
+    justify-content: space-between;
+  }
+  #header button {
+    background-color:#92a1d1;
+  }
+  #container {
+    width: 770px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: #247BA0;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .day:hover {
+    background-color: #e8faed;
+  }
+  
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+  .padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+  }
+  #newEventModal, #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #deleteButton {
+    background-color: #d36c6c;
+  }
+  #saveButton, #closeButton {
+    background-color: #92a1d1;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  

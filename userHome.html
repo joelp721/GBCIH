@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Calendar</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+<div id="searchBar">
+        <nav>
+            <ul>
+                <!-- Add the modified search bar here -->
+                <li>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button type="button" id="searchButton" onclick="search()">Search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+</div>
+
+        <div id="container">
+            <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                    <button id="backButton">&lt</button>
+                    <button id="nextButton">&gt</button>
+                </div>
+            </div>
+
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>                
+            </div>
+            
+            <div id="calendar"></div>
+        </div>
+
+        <div id="newEventModal">
+            <h2>New Event</h2>
+            <input id="eventTitleInput" placeholder="Event Title"\>
+
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+
+        </div>
+
+        <div id="deleteEventModal">
+            <h2>Event</h2>
+
+            <p id="eventText"></p>
+
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+
+        </div>
+
+        <div id="modalBackDrop"></div>
+
+        <script src="./userHome.js"></script>
+
+        <h2>Array Entries</h2>
+<ul id="displayArray"></ul>
+
+<div id="output"></div>
+
+<script>
+// Call the function to display array entries when the page loads
+var storedArray = localStorage.getItem("valuesArray");
+
+// parse
+var valuesArray = JSON.parse(storedArray);
+
+// display the values
+var outputDiv = document.getElementById("output");
+if (outputDiv) {
+if (Array.isArray(outputDiv)) {
+    outputDiv.innerHTML = "<p>Array values:</p><ul>";
+    valuesArray.forEach(function(item) {
+        outputDiv.innerHTML += "<li>" + item + "</li>";
+    });
+    outputDiv.innerHTML += "</ul>";
+} else {
+    outputDiv.innerHTML = "<p>No array values found in local storage.</p>";
+} 
+}
+else {
+    console.error("Element with ID 'output' not found.");
+ }
+//window.onload = displayArrayEntries;
+</script>
+    </body>
+</html>
