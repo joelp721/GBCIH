@@ -243,7 +243,7 @@ REMEMBER TO DELETE THIS LATER
     margin-right: 30px; /* Adjust spacing from other elements */
     margin-top: 20px; /* Adjust margin from the top */
     margin-left: 150px;
-    justify-content: flex-end; /* Align the search bar to the right */
+    justify-content: flex-start; /* Align the search bar to the left */
 }
 #searchInput {
     padding: 10px;
@@ -381,7 +381,13 @@ box-shadow:0 0 5px black;
 
 
 /*for the calendar*/
-body {
+/*body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #FFFCFF;
+  }*/
+  #userHome {
     display: flex;
     margin-top: 50px;
     justify-content: center;
@@ -510,3 +516,4 @@ body {
   }
 
   
+/*for the registration page*/

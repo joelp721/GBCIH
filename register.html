@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,15 @@
 
     <div class="login-box">
 
-        <form action="">
+        <form id="registrationForm" action="">
 
         <h1>
-           Login 
+           Register 
         </h1>
 
         <div class="input-box">
 
-            <input type="text" placeholder="EUID" required>
+            <input type="text" id="username" placeholder="EUID/Username" required>
 
             <i class='bx bxs-user-pin'></i>
 
@@ -35,31 +35,26 @@
 
         <div class="input-box">
 
-            <input type="password" placeholder="Password" required>
+            <input type="password" id="password" placeholder="Password" required>
 
             <i class='bx bxs-lock-alt'></i>
 
         </div>
-
-        <div class="remember-forgot">
-            <label><input type='checkbox'>Remember me</label>
-
-            <a href="#">Forgot password?</a>
+        <div class="input-box">
+            <label for="userType"> Register as:</label>
+            <select id="userType" required>
+                <option value="user">User</option>
+                <option value="organization">Organization</option>
+            </select>
 
         </div>
         <!-- going to change this later, linking to the user home-->
         <!--                                   originally "submit"-->
-        <a href="userHome.html"><button type="button">Login</button></a>
+        <a href="#"><button type="submit">Register</button></a>
 
-        <div class="register-link">
-            <p>
-                Don't have an account? <a href="register.html">Register</a>
-            </p>
-
-        </div>
 
         </form>
     </div>
-
+    <script src="register.js"></script>
 </body>
 </html>
