@@ -19,7 +19,7 @@
 
     <div class="login-box">
 
-        <form action="">
+        <form id="loginForm" action="">
 
         <h1>
            Login 
@@ -27,7 +27,7 @@
 
         <div class="input-box">
 
-            <input type="text" placeholder="EUID" required>
+            <input type="text" id="username" placeholder="EUID" required>
 
             <i class='bx bxs-user-pin'></i>
 
@@ -35,7 +35,7 @@
 
         <div class="input-box">
 
-            <input type="password" placeholder="Password" required>
+            <input type="password" id="password" placeholder="Password" required>
 
             <i class='bx bxs-lock-alt'></i>
 
@@ -48,8 +48,9 @@
 
         </div>
         <!-- going to change this later, linking to the user home-->
-        <!--                                   originally "submit"-->
-        <a href="userHome.html"><button type="button">Login</button></a>
+        <!--                                   originally "submit"
+        <a href="userHome.html"><button type="button">Login</button></a>-->
+        <button type="submit" id="login-button">Login</button>
 
         <div class="register-link">
             <p>
@@ -60,6 +61,7 @@
 
         </form>
     </div>
-
+    <script src="globals.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
