@@ -1,0 +1,95 @@
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orgPage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+<main>
+    <!-- display organization details -->
+<!--
+        <h2 class="organizationName"> Organization Name <br>&nbsp;&nbsp;&nbsp;&nbsp; Organization Name </h2>
+        <p class="org-subhead"> blank organization mission statement. <br> Subscribe to our organization by clicking the button below! <br> Exclusive to UNT for enhanced campus</p>
+    
+        <div class="subscribe-container">
+        <h3 class="subscribe-heading">Let's get connected!</h3> 
+        <a href="subscribe.html"><button type="button" id="subscribe-button">+</button></a>
+        </div>
+
+    </head>
+
+    <!-- display written text written in text box -->
+    <!--
+    <body>
+        <script>
+            function displayText(element, change_to) {
+                document.getElementById(element).textContent = document.getElementById(change_to).value
+            }
+        </script>
+
+        <body>
+            <p id="msg"></p>
+            <textarea id="enterMsg"></textarea>
+        </body>
+        <button id="sendButton" onclick="displayText('msg', 'enterMsg')">Post</button> 
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Home</title>
+
+    <!--fix styles later-->
+    <style>
+        /* Optional: Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    </head>
+    <body>
+    <!--
+    <div class="container">
+        <h2>Create a post:</h2>
+        <label for="inputValue">Type post information:</label>
+        <input type="text" id="inputValue">
+        <button onclick="addValue()">Post</button>
+        <ul id="displayArray"></ul>
+    </div>-->
+    <h1>Welcome, <span id="orgName"></span></h1>
+    <div id="createEventForm">
+        <h2>Create Event</h2>
+        <input id="eventTitleInput" placeholder="Event Title">
+        <input id="eventDateInput" type="date">
+        <button id="createEventButton">Create Event</button>
+    </div>
+    
+    <script src="globals.js"></script>
+    <!--<script src="login.js"></script>-->
+    <script src="orgHome.js"></script>
+
+    
+    </body>
+    </html>
