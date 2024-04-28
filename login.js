@@ -1,8 +1,14 @@
 //login.js
+
 document.addEventListener('DOMContentLoaded', function()
 {
-    const loginForm=document.querySelector('form');
+    //const loginForm=document.querySelector('form');
+    const loginForm=document.getElementById('loginForm');    
     console.log('loginForm:',loginForm);
+
+    if(loginForm)
+    {
+
     loginForm.addEventListener('submit', function(event)
 {
     event.preventDefault();
@@ -23,8 +29,9 @@ document.addEventListener('DOMContentLoaded', function()
         if(pWord=== uData.password)
         {
             //set the current user
+            console.log(uName);
             setCurrentUser(uName, uData.isOrganization ? 'organization': 'user');
-            
+            console.log(currentUser.uName);
             //direct based on the user type
             if(uData.isOrganization)
             { 
@@ -45,5 +52,12 @@ document.addEventListener('DOMContentLoaded', function()
         alert('Username not found.');
     }
 
+
+
+
 });
+    }
+    else{
+        console.log('Login form not found.');
+    }
 });

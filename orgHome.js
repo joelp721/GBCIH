@@ -1,5 +1,19 @@
 
- function displayOrgName()
+document.addEventListener('DOMContentLoaded', function()
+{
+   console.log(currentUser.uName);
+   const orgNameElement= document.getElementById('orgName');
+   if(currentUser) // && currentUser.uType==='organization')
+   {
+      orgNameElement.textContent=current.uName;
+   }
+   else
+   {
+      orgNameElement.textContent='Unknown Organization';
+   }
+}); 
+ 
+ /*function displayOrgName()
  {
     const orgNameElement=document.getElementById('orgName');
     orgNameElement.innerText=currentUser ? currentUser.uName: 'Unknown Organization';
@@ -8,7 +22,7 @@
   {
     displayOrgName();
   });
-  
+  */
   /*
   // Initialize an empty array to store user input values
   let valuesArray = [];
