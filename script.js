@@ -1,14 +1,21 @@
 // script.js
 
+// script.js modifications for content-specific search
 function search() {
     var input = document.getElementById('searchInput').value.toLowerCase();
-    // You'll need to replace the dummy data with your actual search logic
-    var searchResults = []; // Array to hold search results
-    // Perform your search logic here and populate the searchResults array
-
-    // For demonstration purposes, let's just log the search input
-    console.log("Search Query:", input);
+    var allContentElements = document.querySelectorAll('.content'); // Modify this selector to target relevant content
+    var searchResults = [];
+    allContentElements.forEach(function(element) {
+        if(element.textContent.toLowerCase().includes(input)) {
+            searchResults.push(element);
+            element.style.display = 'block'; // Highlight or simply show matching elements
+        } else {
+            element.style.display = 'none'; // Hide non-matching elements
+        }
+    });
+    console.log("Search Results:", searchResults.map(e => e.textContent));
 }
+
 // Define the openTab function
 function openTab(tabName) {
     var i;

@@ -99,7 +99,8 @@ REMEMBER TO DELETE THIS LATER
     align-items: center;
 }
 
-#login-button {
+#login-button,
+#registration-button {
     background-color: #2d5a26;
     color: white;
 }
@@ -109,7 +110,7 @@ REMEMBER TO DELETE THIS LATER
     background: #e3e7d3;
 }
 
-#login-button {
+#login-button{
     width: 20%;
     height: 45px;
     background: #2d5a26;
@@ -122,7 +123,20 @@ REMEMBER TO DELETE THIS LATER
     color: white;
     font-weight: 600;
 }
+#registration-button {
+    width: 45%;
+    height: 45px;
+    background: #2d5a26;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
 
+}
 /* styling for the login page */ 
 
 .login-body {
@@ -243,7 +257,7 @@ REMEMBER TO DELETE THIS LATER
     margin-right: 30px; /* Adjust spacing from other elements */
     margin-top: 20px; /* Adjust margin from the top */
     margin-left: 150px;
-    justify-content: flex-end; /* Align the search bar to the right */
+    justify-content: flex-start; /* Align the search bar to the left */
 }
 #searchInput {
     padding: 10px;
@@ -267,7 +281,7 @@ REMEMBER TO DELETE THIS LATER
     background-color: #059033;
     border: none;
     border-radius: 0 20px 20px 0;
-    color: #fff;
+    color: #195133;
     cursor: pointer;
     outline: none;
 }
@@ -275,59 +289,120 @@ REMEMBER TO DELETE THIS LATER
 #searchButton:hover {
     background-color: #2d5a26; /* Change background color on hover */
 }
-
+/* Tab container styling */
+/* Container for the tabs */
 .tab-container {
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Display tabs vertically */
+    flex-direction: column; /* Organize tabs vertically */
     align-items: center; /* Center align tabs */
-    width: 800px; /* Set width for the tab container */
-    height: 400px; /* Set height for the tab container */
-    border: 2px solid #333232; /* Add border to the tab container */
-    border-radius: 10px; /* Add border radius to create a square */
-    padding: 20px; /* Add padding to the tab container */
-    margin: 50px auto 0 auto; /* Center the tab container horizontally and add margin to the top */
+    width: 800px; /* Fixed width for the tab container */
+    height: auto; /* Auto height based on content */
+    border: 2px solid #333232; /* Solid border around the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 20px; /* Padding around the container's content */
+    margin: 50px auto; /* Center the container with top margin */
+    background: #f9f9f9; /* Background color for the container */
 }
 
+/* Styling for each tab link */
 .tablink {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
+    background-color: #36a360; /* Dark green background for tabs */
+    color: white; /* White text color for contrast */
+    border: none;
     outline: none;
     cursor: pointer;
     padding: 10px 20px;
-    margin-right: 10px; /* Add some spacing between tabs */
-    transition: background-color 0.3s;
+    margin-right: 10px; /* Space between tabs */
+    font-size: 16px; /* Larger font size for readability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and color */
+    border-radius: 5px; /* Rounded corners for tabs */
 }
 
+/* Hover effect for tabs */
 .tablink:hover {
-    background-color: #ddd;
+    background-color: #2d5a26; /* Slightly darker green on hover */
+    color: #fff; /* Maintain white text on hover */
 }
 
-/* Style the active tab */
+/* Styling for the active tab */
 .tablink.active {
-    background-color: #ddd; /* Change active tab background color */
-}
-/* Tab content container */
-.tab-content-container {
-    border: 1px solid #8bb17e;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex; /* Display tab content in a row */
-    flex-direction: column; /* Display tab content vertically */
-}
-/* Tab content */
-.tabcontent {
-    display: none;
-    padding: 20px;
-    border: 1px solid #62c163;
-    border-top: none;
-    width: 100%; /* Ensure tab content fills the container */
+    background-color: #ddd; /* Light grey background for the active tab */
+    color: #000; /* Black text for contrast */
+    border-bottom: 2px solid #4CAF50; /* Highlight active tab with a green bottom border */
 }
 
-/* Display active tab content */
-.tabcontent.active {
-    display: block;
+/* Container for tab content */
+.tab-content-container {
+    width: 100%; /* Full width to fill the tab area */
+    border: 1px solid #ccc; /* Light grey border around the content area */
+    border-top: none; /* No top border to merge with active tab */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    padding: 20px; /* Padding inside the content area */
+    background: #fff; /* White background for the content */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
 }
+
+/* Styling for the content inside tabs */
+.tabcontent {
+    display: none; /* Hide content by default */
+    padding: 20px; /* Padding for the content */
+    border-top: none; /* No top border */
+}
+
+/* Display the active tab's content */
+.tabcontent.active {
+    display: block; /* Show the active content */
+}
+
+/* Event item styling */
+.event-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.event-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* RSVP Button within each event card */
+.rsvp-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right; /* Position button to the right */
+}
+
+.rsvp-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-container {
+        width: 95%; /* Full width on small screens */
+        padding: 10px; /* Reduced padding */
+        margin-top: 20px; /* Smaller top margin */
+    }
+
+    .tablink {
+        padding: 8px 10px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
 
 /*style for the userHome*/
 
@@ -381,7 +456,13 @@ box-shadow:0 0 5px black;
 
 
 /*for the calendar*/
-body {
+/*body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #FFFCFF;
+  }*/
+  #userHome {
     display: flex;
     margin-top: 50px;
     justify-content: center;
@@ -509,4 +590,134 @@ body {
     background-color: rgba(0,0,0,0.8);
   }
 
-  
+input[type="text"], input[type="date"], button {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+ 
+/*for the registration page*/
+
+
+
+/*contact page*/
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #a8d4b4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-container h1, .contact-container h2 {
+    color: #333;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.contact-container a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-links li {
+    margin: 0 10px;
+}
+
+/*about us*/
+/* General body styling */
+body {
+    font-family: 'Sarala', sans-serif;
+    background-color: #bbdcc4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 0;
+}
+
+/* Main about container styling */
+.about-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: hsl(141, 20%, 84%);
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+}
+
+/* Header and paragraph styling */
+.about-container h1, .about-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+}
+
+.about-container h2 {
+    font-size: 1.8rem;
+}
+
+.about-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .about-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .about-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-container p {
+        margin-bottom: 1.5rem;
+    }
+}

@@ -163,6 +163,54 @@ function initButtons()
     document.getElementById('closeButton').addEventListener('click', closeModal);
 
 }
+// Modify userHome.js to include RSVP capabilities
+function rsvpEvent(eventId) {
+    let events = JSON.parse(localStorage.getItem('events')) || [];
+    const event = events.find(e => e.id === eventId);
+    if(event) {
+        let myEvents = JSON.parse(localStorage.getItem('myEvents')) || [];
+        myEvents.push(event);
+        localStorage.setItem('myEvents', JSON.stringify(myEvents));
+        alert('RSVP successful!');
+    } else {
+        alert('Event not found.');
+    }
+}
+
+// Enhance the event display logic to include an RSVP button for each efvven
+// This example assumes you have a function to display events; mowify as needed
+function displayEvents() {
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    const container = document.querySelector('.event-tabs-container');
+    events.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.className = 'event-card';
+
+        const titleElement = document.createElement('div');
+        titleElement.className = 'event-title';
+        titleElement.innerText = event.title;
+
+        const summaryElement = document.createElement('div');
+        summaryElement.className = 'event-summary';
+        summaryElement.innerText = event.summary;
+
+        const rsvpButton = document.createElement('button');
+        rsvpButton.className = 'rsvp-button';
+        rsvpButton.innerText = 'RSVP';
+        rsvpButton.addEventListener('click', () => rsvpEvent(event.id));
+
+        eventElement.appendChild(titleElement);
+        eventElement.appendChild(summaryElement);
+        eventElement.appendChild(rsvpButton);
+
+        container.appendChild(eventElement);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    displayEvents();
+});
 
 initButtons();
 load();
